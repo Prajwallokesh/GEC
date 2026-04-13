@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — GEC UTSAVA'26</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Custom Animated Styles for Contact Page */
+  .contact-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInDown 1s ease-out;
+  }
+  .contact-hero h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #f5a623, #e63946);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .contact-hero p {
+    font-size: 1.2rem;
+    color: var(--muted);
+  }
+
+  .dept-group {
+    margin-bottom: 4rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, border-color 0.4s ease;
+  }
+  .dept-group:hover {
+    transform: translateY(-5px);
+    border-color: rgba(245, 166, 35, 0.3);
+  }
+
+  .dept-label-head {
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+  .dept-name {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    color: #fff;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  }
+
+  .organizers-grid-v2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  .organizer-card-v2 {
+    background: linear-gradient(145deg, rgba(20,24,35,0.8), rgba(15,18,25,0.9));
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+
+  .organizer-card-v2:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 15px 40px rgba(245, 166, 35, 0.2);
+    border-color: rgba(245, 166, 35, 0.5);
+    background: linear-gradient(145deg, rgba(30,35,50,0.9), rgba(20,24,35,0.95));
+  }
+
+  .org-avatar-v2 {
+    font-size: 3rem;
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent;
+    transition: border-color 0.4s ease, transform 0.4s ease;
+  }
+
+  .organizer-card-v2:hover .org-avatar-v2 {
+    border-color: #f5a623;
+    transform: rotate(10deg) scale(1.1);
+    background: rgba(245,166,35,0.1);
+  }
+
+  .org-details-v2 {
+    flex: 1;
+  }
+
+  .org-name-v2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+  }
+
+  .organizer-card-v2:hover .org-name-v2 {
+    color: #f5a623;
+  }
+
+  .org-tags-v2 {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .org-tag {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .org-tag.year { background: rgba(230,57,70,0.2); color: #e63946; }
+  .org-tag.branch { background: rgba(56,189,248,0.2); color: #38bdf8; }
+
+  .org-phone-v2 a {
+    color: #a0a0a0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  .org-phone-v2 a::before {
+    content: '📞';
+    font-size: 1rem;
+  }
+  .org-phone-v2 a:hover {
+    color: #fff;
+  }
+
+  /* Animated Background Elements for Dept Groups */
+  .dept-group::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(245,166,35,0.03) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .dept-group:hover::before {
+    opacity: 1;
+    animation: pulseGlow 3s infinite alternate;
+  }
+
+  @keyframes pulseGlow {
+    0% { transform: scale(0.95); opacity: 0.5; }
+    100% { transform: scale(1.05); opacity: 1; }
+  }
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .contact-hero { margin-top: 0rem !important; margin-bottom: 0rem; }
+    .contact-hero h1 { font-size: 2.8rem; }
+    .contact-hero p { font-size: 1rem; padding: 0 1rem; }
+    .dept-group { padding: 1.5rem 1rem; margin-bottom: 2.5rem; border-radius: 16px; }
+    .dept-name { font-size: 2rem; margin-bottom: 1.5rem; }
+    .organizer-card-v2 { 
+      flex-direction: column; 
+      text-align: center; 
+      gap: 1rem; 
+      padding: 1.25rem; 
+    }
+    .org-tags-v2 { justify-content: center; }
+    .org-phone-v2 a { justify-content: center; }
+    .organizers-grid-v2 { grid-template-columns: 1fr; gap: 1.5rem; }
+    .org-avatar-v2 { width: 70px; height: 70px; font-size: 2.5rem; margin: 0 auto; }
+  }
+</style>
+</head>
+<body>
+
+
+
+<nav>
+  <div class="nav-logo">UTSAVA'26</div>
+  <button class="mobile-menu-btn" onclick="toggleMobileMenu()">&#9776;</button>
+  <div class="nav-menu" id="nav-menu">
+    <div class="nav-links">
+      <a id="nav-home" href="index.html">Home</a>
+      <a id="nav-about" href="about.html">About</a>
+      <a id="nav-events" href="events.html">Events</a>
+      <a id="nav-winners" href="winners.html">Winners</a>
+      <a id="nav-contact" href="contact.html" class="active">Our Team</a>
+    </div>
+
+  </div>
+</nav>
+
+<div id="contact-page" class="page active">
+  <div class="main-container">
+    <div class="contact-hero" style="margin-top: 1rem;">
+      <h1>Our Team</h1>
+      <p>Meet the visionary minds and dynamic organizers who make UTSAVA'26 happen.</p>
+    </div>
+
+    <div class="contact-page-wrap">
+    <div class="contact-section">
+      
+      <div class="dept-group reveal-hidden reveal-up" style="transition-delay:0.05s">
+        <div class="dept-label-head"><span class="dept-name">Computer Science</span></div>
+        <div class="organizers-grid-v2">
+          <div class="organizer-card-v2">
+            <div class="org-avatar-v2"><img src="iamges/rishhhh.jpeg" alt="Prajwal K L" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
+            <div class="org-details-v2">
+              <div class="org-name-v2">Prajwal K L</div>
+              <div class="org-tags-v2"><span class="org-tag year">3rd Year</span><span class="org-tag branch">CS</span></div>
+              <div class="org-phone-v2">+91 7676795409</div>
+            </div>
+          </div>
+          <div class="organizer-card-v2">
+            <div class="org-avatar-v2"><img src="iamges/rkn.png" alt="Rakshitha K N" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
+            <div class="org-details-v2">
+              <div class="org-name-v2">Rakshitha K N</div>
+              <div class="org-tags-v2"><span class="org-tag year">3rd Year</span><span class="org-tag branch">CS</span></div>
+              <div class="org-phone-v2">+91 9740331174</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dept-group reveal-hidden reveal-up" style="transition-delay:0.1s">
+        <div class="dept-label-head"><span class="dept-name">Civil Engineering</span></div>
+        <div class="organizers-grid-v2">
+          <div class="organizer-card-v2">
+            <div class="org-avatar-v2"><img src="iamges/rag.jpeg" alt="Raghavendra N Y" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
+            <div class="org-details-v2">
+              <div class="org-name-v2">Raghavendra N Y</div>
+              <div class="org-tags-v2"><span class="org-tag year">3rd Year</span><span class="org-tag branch">Civil</span></div>
+              <div class="org-phone-v2">+91 9019938814</a></div>
+            </div>
+          </div>
+          <div class="organizer-card-v2">
+            <div class="org-avatar-v2"><img src="iamges/boomikw.jpeg" alt="Bhumika B C" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
+            <div class="org-details-v2">
+              <div class="org-name-v2">Bhumika B C</div>
+              <div class="org-tags-v2"><span class="org-tag year">3rd Year</span><span class="org-tag branch">Civil</span></div>
+              <div class="org-phone-v2">+91 9741809748</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dept-group reveal-hidden reveal-up" style="transition-delay:0.15s">
+        <div class="dept-label-head"><span class="dept-name">Electronics</span></div>
+        <div class="organizers-grid-v2">
+          <div class="organizer-card-v2">
+            <div class="org-avatar-v2"><img src="iamges/vishwas.png" alt="Vishwas" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
+            <div class="org-details-v2">
+              <div class="org-name-v2">Vishwas S</div>
+              <div class="org-tags-v2"><span class="org-tag year">3rd Year</span><span class="org-tag branch">EC</span></div>
+              <div class="org-phone-v2">+91 6361757482</a></div>
+            </div>
+          </div>
+          <div class="organizer-card-v2">
+            <div class="org-avatar-v2"><img src="iamges/likith.jpeg" alt="Likhitha H" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
+            <div class="org-details-v2">
+              <div class="org-name-v2">Likhitha H</div>
+              <div class="org-tags-v2"><span class="org-tag year">3rd Year</span><span class="org-tag branch">EC</span></div>
+              <div class="org-phone-v2">+91 9019718563</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="dept-group reveal-hidden reveal-up" style="transition-delay:0.2s">
+        <div class="dept-label-head"><span class="dept-name">Mechanical</span></div>
+        <div class="organizers-grid-v2">
+          <div class="organizer-card-v2">
+            <div class="org-avatar-v2"><img src="iamges/rehan.jpeg" alt="Aliya Rehman" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
+            <div class="org-details-v2">
+              <div class="org-name-v2">Abdul Rehan</div>
+              <div class="org-tags-v2"><span class="org-tag year">3rd Year</span><span class="org-tag branch">ME</span></div>
+              <div class="org-phone-v2">+91 8105361856</a></div>
+            </div>
+          </div>
+          <div class="organizer-card-v2">
+            <div class="org-avatar-v2"><img src="iamges/aliya.jpeg" alt="Abdul Rehan" style="width:100%; height:100%; border-radius:50%; object-fit:cover;"></div>
+            <div class="org-details-v2">
+              <div class="org-name-v2">Aliya Rehman</div>
+              <div class="org-tags-v2"><span class="org-tag year">3rd Year</span><span class="org-tag branch">ME</span></div>
+              <div class="org-phone-v2"></a>+91 8197155787</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+</div>
+
+<footer>Made with Love &copy; GEC Utsava'26 &mdash; Government Engineering College Hassan</footer>
+
+<div class="event-detail-overlay" id="event-overlay">
+  <div class="event-detail-modal">
+    <button class="modal-close" onclick="closeEventModal()">&#10005;</button>
+    <div class="modal-banner" id="modal-banner">
+      <img id="modal-banner-img" src="" alt="">
+      <div class="modal-banner-overlay"></div>
+      <div class="modal-banner-emoji" id="modal-banner-emoji"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-cat" id="modal-cat"></div>
+      <div class="modal-title" id="modal-title"></div>
+      <div class="modal-meta-row">
+        <div class="modal-meta-item"><div class="modal-meta-label">Date &amp; Time</div><div class="modal-meta-value" id="modal-day"></div></div>
+        <div class="modal-meta-item"><div class="modal-meta-label">Venue</div><div class="modal-meta-value" id="modal-venue"></div></div>
+        <div class="modal-meta-item"><div class="modal-meta-label">Team Size</div><div class="modal-meta-value" id="modal-team"></div></div>
+        <div class="modal-meta-item"><div class="modal-meta-label">Duration</div><div class="modal-meta-value" id="modal-duration"></div></div>
+      </div>
+      <div id="modal-fee-row" style="margin-bottom:1.5rem;"></div>
+      <p class="modal-desc" id="modal-desc"></p>
+      <div class="modal-section-title">Rules &amp; Regulations</div>
+      <ul class="instructions-list" id="modal-instructions"></ul>
+      <div class="modal-section-title">Event Coordinators</div>
+      <div class="coords-grid" id="modal-coords"></div>
+      <a href="#" target="_blank" class="modal-reg-btn" id="modal-reg-btn">REGISTER FOR THIS EVENT</a>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<canvas id="starfield" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;"></canvas>
+<script src="script.js"></script>
+<script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var loader = document.getElementById('page-loader');
+      if (loader) { loader.classList.add('hidden'); document.body.classList.add('loaded'); }
+    }, 2000);
+  });
+</script>
+</body>
+</html>

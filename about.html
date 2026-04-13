@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — GEC UTSAVA'26</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* Custom Styles for About Page */
+  
+  .about-hero {
+    text-align: center;
+    padding: 3rem 1.5rem 3rem;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInDown 1s ease-out;
+  }
+
+  .about-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: 50%;
+    transform: translateX(-50%);
+    width: 150vw; height: 150vw;
+    background: radial-gradient(circle, rgba(245, 166, 35, 0.05) 0%, transparent 60%);
+    z-index: -1;
+  }
+
+  .about-hero h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--accent, #f5a623), var(--accent2, #e63946));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .about-hero p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--muted, #a0a0a0);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Grid Layouts */
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 4rem auto;
+    max-width: 1200px;
+    padding: 0 1.5rem;
+  }
+
+  .about-card {
+    background: linear-gradient(145deg, rgba(20, 24, 35, 0.7), rgba(14, 17, 23, 0.9));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(245, 166, 35, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(245, 166, 35, 0.05);
+  }
+
+  .about-card::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--accent, #f5a623), var(--accent2, #e63946));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+
+  .about-card:hover::after {
+    transform: scaleX(1);
+  }
+
+  .ac-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    width: 80px; height: 80px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s ease;
+  }
+
+  .about-card:hover .ac-icon {
+    transform: scale(1.1) rotate(-5deg);
+    border-color: rgba(245, 166, 35, 0.3);
+  }
+
+  .about-card h3 {
+    font-size: 1.75rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+  }
+
+  .about-card p {
+    color: var(--muted, #a0a0a0);
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+
+  /* Section Titles */
+  .section-title {
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    color: #fff;
+    letter-spacing: 1px;
+    margin: 4rem auto 3rem;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; left: 0; width: 100%; height: 4px;
+    background: linear-gradient(90deg, transparent, var(--accent, #f5a623), transparent);
+  }
+
+  /* HOD Section */
+  .hod-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2.5rem;
+    margin: 0 auto 6rem;
+    max-width: 1200px;
+    padding: 0 1.5rem;
+  }
+
+  .hod-card {
+    background: rgba(14, 17, 23, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex; flex-direction: column; align-items: center;
+  }
+
+  .hod-card:hover {
+    background: rgba(20, 24, 35, 0.8);
+    border-color: rgba(245, 166, 35, 0.2);
+    transform: translateY(-5px);
+  }
+
+  .hod-avatar {
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    padding: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .hod-card:hover .hod-avatar {
+    border-color: var(--accent, #f5a623);
+  }
+
+  .hod-avatar img {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .hod-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+  }
+
+  .hod-dept {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--accent, #f5a623);
+    margin-bottom: 1rem;
+    background: rgba(245, 166, 35, 0.1);
+    padding: 6px 12px;
+    border-radius: 100px;
+    border: 1px solid rgba(245, 166, 35, 0.2);
+  }
+
+  .hod-desc {
+    color: var(--muted, #a0a0a0);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  /* Reach Us Section */
+  .reach-us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 0 auto 6rem;
+    max-width: 1200px;
+    padding: 0 1.5rem;
+  }
+  .reach-card-v2 {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  .reach-card-v2:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(245,166,35,0.4);
+    transform: translateY(-5px);
+  }
+  .reach-icon-v2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, rgba(245,166,35,0.2), rgba(230,57,70,0.2));
+    width: 70px; height: 70px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    color: var(--accent, #f5a623);
+  }
+  .reach-label-v2 {
+    font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.5rem;
+  }
+  .reach-value-v2 a, .reach-value-v2 {
+    color: var(--muted, #a0a0a0); text-decoration: none; font-size: 0.95rem;
+    transition: color 0.3s ease;
+  }
+  .reach-value-v2 a:hover { color: var(--accent, #f5a623); }
+
+  /* Map Section */
+  .map-container {
+    background: linear-gradient(145deg, rgba(20, 24, 35, 0.6), rgba(14, 17, 23, 0.8));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 1.5rem;
+    margin: 0 auto 6rem;
+    max-width: 1200px;
+    display: flex; flex-direction: column; gap: 1.5rem;
+    width: calc(100% - 3rem);
+  }
+  
+  .map-header {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem; padding: 0 1rem;
+  }
+
+  .map-header h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem; color: #fff; letter-spacing: 1px;
+    margin: 0;
+  }
+
+  .map-badge {
+    background: rgba(245, 166, 35, 0.1);
+    color: var(--accent, #f5a623);
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 0.85rem; font-family: 'JetBrains Mono', monospace; font-weight: 700;
+    text-transform: uppercase; border: 1px solid rgba(245, 166, 35, 0.2);
+  }
+
+  .map-image {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  }
+
+  .map-image img {
+    width: 100%; height: auto; display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .map-image:hover img {
+    transform: scale(1.03);
+  }
+
+  .footer-info {
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+    padding: 0 1rem; color: var(--muted, #a0a0a0); font-size: 0.95rem;
+  }
+
+  .vtu-badge {
+    color: var(--accent3, #00d4ff); font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem; background: rgba(0, 212, 255, 0.1); padding: 4px 10px; border-radius: 4px;
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Responsive Fixes */
+  @media (max-width: 768px) {
+    .about-hero { padding: 0; }
+    .about-card { padding: 2rem 1.5rem; }
+    .map-container { padding: 1rem; width: calc(100% - 2rem); margin-bottom: 4rem; }
+    .footer-info { flex-direction: column; text-align: center; }
+    .section-title { font-size: 2.5rem; margin-top: 3rem; margin-bottom: 2rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE LOADER -->
+
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-logo">UTSAVA'26</div>
+  <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+  <div class="nav-menu" id="nav-menu">
+    <div class="nav-links">
+      <a id="nav-home" href="index.html">Home</a>
+      <a id="nav-about" href="about.html" class="active">About</a>
+      <a id="nav-events" href="events.html">Events</a>
+      <a id="nav-winners" href="winners.html">Winners</a>
+      <a id="nav-contact" href="contact.html">Our Team</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="page active" style="padding-top: 20px;">
+  <div class="main-container">
+    
+    <!-- Hero Section -->
+    <div class="about-hero">
+      <h1>Discover Our Legacy</h1>
+      <p>Empowering the future through academic excellence, innovation, and a vibrant cultural heritage at Government Engineering College, Hassan.</p>
+    </div>
+
+    <!-- About Grid -->
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="ac-icon">🏛️</div>
+        <h3>The Institution</h3>
+        <p>A premier government engineering institution in Hassan, Karnataka. Established with a commitment to excellence, our college has consistently produced skilled engineers who excel globally.</p>
+      </div>
+      <div class="about-card">
+        <div class="ac-icon">💡</div>
+        <h3>Academic Excellence</h3>
+        <p>Affiliated to VTU, Belagavi, we offer engineering programs with a strong focus on practical learning. Our curriculum keeps pace with rapidly evolving technological landscapes.</p>
+      </div>
+      
+      <div class="about-card">
+        <div class="ac-icon">🎉</div>
+        <h3>GEC UTSAVA</h3>
+        <p>Our annual cultural fest — a massive platform for students to showcase talent in performing arts, fine arts, and literary events. It celebrates diversity, creativity, and college spirit.</p>
+      </div>
+    </div>
+
+    <!-- HOD Section -->
+    <div class="section-title">Head of Departments</div>
+    <div class="hod-grid">
+      <div class="hod-card">
+        <div class="hod-avatar"><img src="iamges/tgbb.jpeg" alt="HOD CSE"></div>
+        <div class="hod-name">Dr. T G Basavaraju</div>
+        <div class="hod-dept">Computer Science</div>
+        <div class="hod-desc">Leading the CSE department with a vision to build strong foundational knowledge and foster innovation in modern computing technologies.</div>
+      </div>
+       <div class="hod-card">
+        <div class="hod-avatar"><img src="iamges/vanii.jpeg" alt="HOD CSE"></div>
+        <div class="hod-name">Dr. Vani V G</div>
+        <div class="hod-dept">AI & ML</div>
+        <div class="hod-desc">Leading the AIML department with a vision to build strong foundational knowledge and foster innovation in modern computing technologies.</div>
+      </div>
+      <div class="hod-card">
+        <div class="hod-avatar"><img src="iamges/neelu.jpeg" alt="HOD ECE"></div>
+        <div class="hod-name">Dr. Neelappa M D</div>
+        <div class="hod-dept">Electronics & Comm.</div>
+        <div class="hod-desc">Empowering students with hands-on experience in electronics and communication systems to meet global industry standards.</div>
+      </div>
+      <div class="hod-card">
+        <div class="hod-avatar"><img src="iamges/summ.jpeg" alt="HOD MECH"></div>
+        <div class="hod-name">Dr. Sumana B G </div>
+        <div class="hod-dept">Mechanical Engg.</div>
+        <div class="hod-desc">Fostering analytical and problem-solving skills in mechanical systems and design, preparing students for real-world challenges.</div>
+      </div>
+      <div class="hod-card">
+        <div class="hod-avatar"><img src="iamges/mkk.jpeg" alt="HOD CIVIL"></div>
+        <div class="hod-name">Dr. ManojKrishna K V</div>
+        <div class="hod-dept">Civil Engineering</div>
+        <div class="hod-desc">Dedicated to developing sustainable infrastructure solutions and training future civil engineers for global development.</div>
+      </div>
+      <div class="hod-card">
+        <div class="hod-avatar"><img src="iamges/ptt.jpeg" alt="HOD Physical Education"></div>
+        <div class="hod-name">Srinivas Murthy</div>
+        <div class="hod-dept">Physical Education</div>
+        <div class="hod-desc">Promoting physical fitness, sportsmanship, and overall well-being among students through active participation in sports.</div>
+      </div>
+      <div class="hod-card">
+        <div class="hod-avatar"><img src="iamges/shan.jpeg" alt="HOD CSE"></div>
+        <div class="hod-name">Dr. M Shanmugam</div>
+        <div class="hod-dept">Training & Placement Officer</div>
+        <div class="hod-desc">Leading Training and Placement Office to enhance employability, strengthen industry ties, and create career opportunities.</div>
+      </div>
+      <div class="hod-card">
+        <div class="hod-avatar"><img src="iamges/phyy.jpeg" alt="HOD Physics"></div>
+        <div class="hod-name"> Rangaswamy</div>
+        <div class="hod-dept">Physics</div>
+        <div class="hod-desc">Building a strong foundation in applied physics to help students understand the fundamental principles behind engineering.</div>
+      </div>
+      <div class="hod-card">
+        <div class="hod-avatar"><img src="iamges/maduu.jpeg" alt="HOD Chemistry"></div>
+        <div class="hod-name">Dr. Madhuri R</div>
+        <div class="hod-dept">Chemistry</div>
+        <div class="hod-desc">Imparting essential knowledge of chemical sciences and materials to support various engineering disciplines.</div>
+      </div>
+      <div class="hod-card">
+        <div class="hod-avatar"><img src="iamges/gann.jpeg" alt="HOD Mathematics"></div>
+        <div class="hod-name"> Ganavi  </div>
+        <div class="hod-dept">Mathematics</div>
+        <div class="hod-desc">Equipping students with analytical and mathematical problem-solving skills crucial for complex engineering applications.</div>
+      </div>
+      <div class="hod-card">
+        <div class="hod-avatar"><img src="iamges/nss.jpeg" alt="NSS Officer"></div>
+        <div class="hod-name"> Guru Basavanna</div>
+        <div class="hod-dept">NSS</div>
+        <div class="hod-desc">Encouraging community service, social responsibility, and leadership qualities through the National Service Scheme.</div>
+      </div>
+    </div>
+
+    <!-- Reach Us Section -->
+    <div class="section-title">Reach Us</div>
+    <div class="reach-us-grid">
+      <div class="reach-card-v2">
+        <div class="reach-icon-v2">📍</div>
+        <div class="reach-label-v2">Location</div>
+        <div class="reach-value-v2">GEC Hassan, Karnataka 573201</div>
+      </div>
+      <div class="reach-card-v2">
+        <div class="reach-icon-v2">📧</div>
+        <div class="reach-label-v2">Email</div>
+        <div class="reach-value-v2"><a href="mailto:contact@gecutsava.in">contact@gecutsava.in</a></div>
+      </div>
+      <div class="reach-card-v2">
+        <div class="reach-icon-v2">🌐</div>
+        <div class="reach-label-v2">Website</div>
+        <div class="reach-value-v2"><a href="https://gechassan.ac.in" target="_blank">gechassan.ac.in</a></div>
+      </div>
+      
+    </div>
+
+    <!-- Campus Map -->
+    <div class="section-title">Campus Map</div>
+    <div class="map-container">
+      <div class="map-header">
+        <h2>GEC Hassan Campus</h2>
+        <span class="map-badge">Hassan, Karnataka</span>
+      </div>
+      <div class="map-image">
+        <img src="iamges/campus_map__2__page-0001.jpg" alt="Campus Map" loading="lazy">
+      </div>
+      <div class="footer-info">
+        <span>📍 Government Engineering College, Dairy Circle, Hassan - 573201</span>
+        <span class="vtu-badge">VTU Affiliated Institution</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<canvas id="starfield" style="position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;pointer-events:none;"></canvas>
+<script src="script.js"></script>
+<script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var loader = document.getElementById('page-loader');
+      if (loader) { loader.classList.add('hidden'); document.body.classList.add('loaded'); }
+    }, 1000);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winners - GEC UTSAVA'26</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .winners-container {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  .lock-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    background: rgba(0,0,0,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 3rem;
+  }
+  .lock-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+  }
+  .countdown-timer {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  .timer-box {
+    background: rgba(255,255,255,0.05);
+    padding: 1.5rem;
+    border-radius: 12px;
+    min-width: 80px;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .timer-val {
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: 'JetBrains Mono', monospace;
+    color: #ff00ff;
+    display: block;
+  }
+  .timer-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #888;
+  }
+  
+  .winners-content {
+    display: none;
+  }
+  .winners-content.unlocked {
+    display: block;
+  }
+  
+  .winners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .winner-card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 16px;
+    padding: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  .winner-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255,0,255,0.3);
+  }
+  .event-name-header {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .prize-section {
+    margin-bottom: 1.5rem;
+  }
+  .prize-title {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .winner-title { color: #ffd700; } /* Gold */
+  .runner-title { color: #c0c0c0; } /* Silver */
+  
+  .winner-names {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .winner-names li {
+    background: rgba(255,255,255,0.05);
+    margin-bottom: 0.4rem;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .winner-names li::before {
+    content: '🏆';
+    font-size: 0.8rem;
+  }
+  .runner-names li::before {
+    content: '🥈';
+    font-size: 0.8rem;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .winners-container {
+      padding: 1rem;
+      margin-top: 20px;
+    }
+    .lock-screen {
+      padding: 2rem 1rem;
+      min-height: 50vh;
+    }
+    .lock-screen h2 {
+      font-size: 1.5rem;
+    }
+    .countdown-timer {
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .timer-box {
+      padding: 1rem;
+      min-width: 70px;
+      flex: 1 1 calc(50% - 1rem);
+      max-width: 120px;
+    }
+    .timer-val {
+      font-size: 1.8rem;
+    }
+    .winners-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .event-name-header {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Mobile Nav Fix if needed */
+  @media (max-width: 992px) {
+    .nav-menu {
+      display: none;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      right: 0;
+      background: rgba(8, 10, 15, 0.98);
+      padding: 2rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      flex-direction: column;
+      z-index: 1000;
+    }
+    .nav-menu.show {
+      display: flex;
+    }
+    .nav-links {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .mobile-menu-btn {
+      display: block;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-logo">UTSAVA'26</div>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    <div class="nav-menu" id="nav-menu">
+      <div class="nav-links">
+        <a id="nav-home" href="index.html">Home</a>
+        <a id="nav-about" href="about.html">About</a>
+        <a id="nav-events" href="events.html">Events</a>
+        <a id="nav-winners" href="winners.html" class="active">Winners</a>
+        <a id="nav-contact" href="contact.html">Our Team</a>
+      </div>
+    </div>
+</nav>
+
+<div class="winners-container">
+  <h1 class="section-title">Wall of Fame</h1>
+  
+  <!-- LOCK SCREEN -->
+  <div id="lock-screen" class="lock-screen">
+    <div class="lock-icon">🔒</div>
+    <h2>Winners will be announced on April 29th!</h2>
+    <p>Stay tuned to see who takes home the glory.</p>
+    
+    <div class="countdown-timer">
+      <div class="timer-box">
+        <span id="win-days" class="timer-val">00</span>
+        <span class="timer-label">Days</span>
+      </div>
+      <div class="timer-box">
+        <span id="win-hrs" class="timer-val">00</span>
+        <span class="timer-label">Hours</span>
+      </div>
+      <div class="timer-box">
+        <span id="win-min" class="timer-val">00</span>
+        <span class="timer-label">Mins</span>
+      </div>
+      <div class="timer-box">
+        <span id="win-sec" class="timer-val">00</span>
+        <span class="timer-label">Secs</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- WINNERS CONTENT -->
+  <div id="winners-content" class="winners-content">
+    <div class="winners-grid" id="winners-grid">
+      <!-- Dynamically populated -->
+    </div>
+  </div>
+</div>
+
+<footer>
+  Made with Love © GEC Utsava'26 — Government Engineering College Hassan
+</footer>
+
+<canvas id="starfield" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none;"></canvas>
+
+<script src="script.js"></script>
+<script>
+  // Winners Page Logic
+  const WINNERS_RELEASE_DATE = new Date('2026-04-29T10:00:00+05:30');
+  
+  function updateWinnersCountdown() {
+    const now = new Date();
+    const diff = WINNERS_RELEASE_DATE - now;
+    
+    if (diff <= 0) {
+      document.getElementById('lock-screen').style.display = 'none';
+      document.getElementById('winners-content').classList.add('unlocked');
+      renderWinners();
+      return;
+    }
+    
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    
+    document.getElementById('win-days').textContent = String(d).padStart(2, '0');
+    document.getElementById('win-hrs').textContent = String(h).padStart(2, '0');
+    document.getElementById('win-min').textContent = String(m).padStart(2, '0');
+    document.getElementById('win-sec').textContent = String(s).padStart(2, '0');
+  }
+
+  function getTeamSize(teamStr) {
+    if (teamStr.toLowerCase() === 'solo') return 1;
+    const match = teamStr.match(/\d+/);
+    return match ? parseInt(match[0]) : 1;
+  }
+
+  function renderWinners() {
+    const grid = document.getElementById('winners-grid');
+    // Sort events alphabetically
+    const sortedEvents = [...EVENTS].sort((a, b) => a.name.localeCompare(b.name));
+    
+    // Load winners from localStorage or use placeholders
+    const winnersData = JSON.parse(localStorage.getItem('utsava_winners') || '{}');
+    
+    grid.innerHTML = sortedEvents.map(ev => {
+      const size = getTeamSize(ev.team);
+      const evWinners = winnersData[ev.id] || { winner: [], runner: [] };
+      
+      // Ensure we have the right number of slots
+      const winNames = evWinners.winner.length ? evWinners.winner : Array(size).fill('TBA');
+      const runNames = evWinners.runner.length ? evWinners.runner : Array(size).fill('TBA');
+      
+      return `
+        <div class="winner-card">
+          <div class="event-name-header">
+            ${ev.name}
+            <span style="font-size: 0.8rem; color: #888;">${ev.category}</span>
+          </div>
+          
+          <div class="prize-section">
+            <div class="prize-title winner-title">🏆 Winner</div>
+            <ul class="winner-names">
+              ${winNames.slice(0, size).map(name => `<li>${name}</li>`).join('')}
+            </ul>
+          </div>
+          
+          <div class="prize-section">
+            <div class="prize-title runner-title">🥈 Runner Up</div>
+            <ul class="winner-names runner-names">
+              ${runNames.slice(0, size).map(name => `<li>${name}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  setInterval(updateWinnersCountdown, 1000);
+  updateWinnersCountdown();
+</script>
+</body>
+</html>
