@@ -151,17 +151,22 @@ const EVENTS = [
     emoji: '', day: 'Day 1 · April 27 · 12:00 PM', venue: 'College Campus', team: 'Solo',
     duration: '1 Hour', fee: '₹20.00 per participant',
     color: 'linear-gradient(135deg,#0a0a0a,#1a1a3a)',
-    desc: 'Capture the essence of a given theme in a single photograph taken on-campus during the competition window. Minimal post-processing only. The best frame wins.',
+    desc: 'Capture the essence of a given theme in a single photograph taken on-campus during the competition window. Minimal post-processing only. The best frame wins.📩 Send the captured photos to: varundrappu@gmail.com',
     instructions: [
       'Individual participation only.',
-      'The total duration of the event is 1 hour.',
-      'Photographs must be captured within the college campus only.',
-      'Participants must submit exactly 3 photographs.',
-      'Photos must be submitted within 1 hour to the coordinator’s email.',
-      'Late submissions will be rejected.',
-      'Editing, filters, and AI-generated / AI-edited content are strictly prohibited.',
-      'Each photo must contain the participant’s name and time as a watermark.',
-      'The decision of the coordinators and judges will be final.',
+
+ 'Total event duration: 1 hour.',
+ 'All photographs must be captured within the college campus only', 
+ 'Each participant must submit exactly 3 photographs',
+ 'Photos must be submitted within 1 hour from the start of the event',
+ 'Submit all photos to: varundrappu@gmail.com',
+ 'Late submissions will be rejected',
+ 'Editing, filters, enhancements, and AI-generated / AI-edited images are strictly prohibited',
+ 'Each photo must include the participant’s name and capture time as a watermark',
+ 'If any edited photos are found, the participant will be disqualified immediately',
+ 'The decision of the coordinators and judges will be final',
+
+ 
     ],
     coordinators: [
       { name: 'Varun', role: '3rd Year EC', phone: '+91 6363334145', init: 'V' },
