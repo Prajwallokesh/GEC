@@ -369,16 +369,16 @@ const EVENTS = [
        'Rebuttal: Do not introduce new arguments during rebuttal; address only existing points.',
     ],
     coordinators: [
-      { name: 'Preetham K M ', role: '', phone: '+91 ', init: 'KM' },
-      { name: 'Shashank S P', role: '', phone: '+91 ', init: 'SP' },
+      { name: 'Preetham K M ', role: '3rd Year ME', phone: '+91 930823406', init: 'KM' },
+      { name: 'Shashank S P', role: '', phone: '+91 8970522555 ', init: 'SP' },
     ]
   },
   {
-    id: 'star of gech', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Star+of+GECH', name: 'Star of GECH', category: 'Mega',
+    id: 'starofgech', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Star+of+GECH', name: 'Star of GECH', category: 'Mega',
     emoji: '⭐', day: 'Day 2 · April 28 · 01:30 PM', venue: 'Main Entrance Hall', team: 'Solo',
     duration: 'Multiple Rounds', fee: 'Free Entry',
     color: 'linear-gradient(135deg,#1a1400,#5c4a00)',
-    desc: 'The crown jewel of NEXUS Fest — a multi-talent pageant to find the ultimate star of GECH. Compete in multiple talent rounds: introduction, talent, ramp walk, and Q&A before a live audience.',
+    desc: 'The crown jewel of Gech Utsava Fest — a multi-talent pageant to find the ultimate star of GECH. Compete in multiple talent rounds: introduction, talent, ramp walk, and Q&A before a live audience.',
     instructions: [
       'Individual participation only.',
       'Participants must take part in at least one fest event to be eligible.',
@@ -390,7 +390,10 @@ const EVENTS = [
       'Winner receives certificate, medal, and cash prize.',
       'Top 3 performers will receive certificate and medal.',
     ],
-    
+     coordinators: [
+      { name: 'p ', role: '', phone: '+91 ', init: 'KM' },
+      { name: 'p', role: '', phone: '+91 ', init: 'SP' },
+    ]
   },
   {
     id: 'fashionshow', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Fashion+Show', name: 'Fashion Show', category: 'Performing Arts',

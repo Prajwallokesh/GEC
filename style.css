@@ -11,14 +11,22 @@
     --success: #22c55e;
   }
 
+html {
+    scroll-behavior: smooth;
+  }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
   body {
     background: var(--bg);
     color: var(--text);
     font-family: 'Space Grotesk', sans-serif;
     min-height: 100vh;
-    overflow-x: hidden;
   }
 
   body::before {
@@ -164,9 +172,9 @@
   .cd-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--accent); line-height: 1; }
   .cd-label { font-size: 0.65rem; color: var(--muted); letter-spacing: 2px; text-transform: uppercase; }
 
-  .college-info { width: 100%; max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem 4rem 3rem; overflow: hidden; }
+  .college-info { width: 100%; max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; overflow: hidden; }
   .section-title {
-    font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.2rem, 4vw, 3rem); letter-spacing: 4px;
+    font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 4vw, 3rem); letter-spacing: 4px;
     margin-bottom: 2.5rem; position: relative; display: inline-block; text-transform: uppercase;
     background: linear-gradient(135deg, #ffffff 0%, #b0b5c0 100%);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
@@ -865,7 +873,7 @@ body.loaded > *:not(#page-loader) {
 }
 .principal-name {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2rem, 4vw, 2.8rem); letter-spacing: 3px;
+  font-size: clamp(1.6rem, 4vw, 2.8rem); letter-spacing: 3px;
   background: linear-gradient(135deg, #fff 30%, var(--accent) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   line-height: 1; margin-bottom: 0.5rem;
