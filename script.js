@@ -370,7 +370,7 @@ const EVENTS = [
     ],
     coordinators: [
       { name: 'Preetham K M ', role: '3rd Year ME', phone: '+91 930823406', init: 'KM' },
-      { name: 'Shashank S P', role: '', phone: '+91 8970522555 ', init: 'SP' },
+      { name: 'Shashank S P', role: '3rd Year ME', phone: '+91 8970522555 ', init: 'SP' },
     ]
   },
   {
@@ -391,8 +391,8 @@ const EVENTS = [
       'Top 3 performers will receive certificate and medal.',
     ],
      coordinators: [
-      { name: 'p ', role: '', phone: '+91 ', init: 'KM' },
-      { name: 'p', role: '', phone: '+91 ', init: 'SP' },
+      { name: 'Eshwar Chandra K C', role: '3rd Year CV', phone: '+91 8310286330', init: 'KC' },
+      
     ]
   },
   {
@@ -415,7 +415,7 @@ const EVENTS = [
       'Judging: Based on presentation, teamwork, and costume.',
     ],
     coordinators: [
-      { name: 'Shashank S P', role: '', phone: '+91 ', init: 'SP' },
+      { name: 'Shashank S P', role: '3rd Year ME', phone: '+91 8970522555 ', init: 'SP'},
       { name: 'Vishwas', role: '3rd Year EC', phone: '+91 6361757482', init: 'V' },
       { name: 'Naresh Babu N', role: '3rd Year CV', phone: '+91 8147661174', init: 'NB' },
     ]
@@ -481,7 +481,7 @@ const EVENTS = [
       'Judging: Based on timing, stage presence, and audience response.',
     ],
     coordinators: [
-      { name: 'Preetham K M', role: '3rd Year ME', phone: '+91 ', init: 'KM' },
+      { name: 'Preetham K M', role: '3rd Year ME', phone: '+91 930823406', init: 'KM' },
       { name: 'Darshan B N', role: '3rd Year ME', phone: '+91 8792046829', init: 'BN' },
       { name: 'Mohith', role: '2nd Year EC', phone: '+91 8660318514', init: 'V' },
     ]
