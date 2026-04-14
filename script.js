@@ -621,9 +621,31 @@ function renderEvents(filter = 'all') {
   setTimeout(initScrollObserver, 100);
 }
 
+function toggleFilters() {
+  const filter = document.getElementById('events-filter');
+  const btn = document.getElementById('filter-toggle-btn');
+  filter.classList.toggle('show');
+  btn.classList.toggle('active');
+}
+
 function filterEvents(cat, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
+  
+  // Update toggle button text on mobile
+  const currentFilterText = document.getElementById('current-filter');
+  if (currentFilterText) {
+    currentFilterText.textContent = btn.textContent;
+  }
+  
+  // Close dropdown on mobile after selection
+  const filter = document.getElementById('events-filter');
+  const toggleBtn = document.getElementById('filter-toggle-btn');
+  if (window.innerWidth <= 768) {
+    filter.classList.remove('show');
+    toggleBtn.classList.remove('active');
+  }
+
   renderEvents(cat);
 }
 

@@ -30,15 +30,21 @@
     <div class="main-container">
       <div class="events-page">
         <h2 class="section-title" style="margin-top: 2rem;">All Events</h2>
-        <div class="events-filter">
-          <button class="filter-btn active" onclick="filterEvents('all',this)">All Events</button>
-          <button class="filter-btn" onclick="filterEvents('Performing Arts',this)">🎭 Performing Arts</button>
-          <button class="filter-btn" onclick="filterEvents('Literary',this)">📖 Literary</button>
-          <button class="filter-btn" onclick="filterEvents('Visual Arts',this)">🎨 Visual Arts</button>
-          <button class="filter-btn" onclick="filterEvents('Dance',this)">💃 Dance</button>
-          <button class="filter-btn" onclick="filterEvents('Music',this)">🎵 Music</button>
-          <button class="filter-btn" onclick="filterEvents('Games',this)">🎮 Games</button>
-          <button class="filter-btn" onclick="filterEvents('Mega',this)">⭐ Mega Events</button>
+        <div class="filter-container">
+          <button class="filter-toggle-btn" id="filter-toggle-btn" onclick="toggleFilters()">
+            <span id="current-filter">All Events</span>
+            <span class="chevron">▼</span>
+          </button>
+          <div class="events-filter" id="events-filter">
+            <button class="filter-btn active" onclick="filterEvents('all',this)">All Events</button>
+            <button class="filter-btn" onclick="filterEvents('Performing Arts',this)">🎭 Performing Arts</button>
+            <button class="filter-btn" onclick="filterEvents('Literary',this)">📖 Literary</button>
+            <button class="filter-btn" onclick="filterEvents('Visual Arts',this)">🎨 Visual Arts</button>
+            <button class="filter-btn" onclick="filterEvents('Dance',this)">💃 Dance</button>
+            <button class="filter-btn" onclick="filterEvents('Music',this)">🎵 Music</button>
+            <button class="filter-btn" onclick="filterEvents('Games',this)">🎮 Games</button>
+            <button class="filter-btn" onclick="filterEvents('Mega',this)">⭐ Mega Events</button>
+          </div>
         </div>
         <div class="events-grid" id="events-grid"></div>
       </div>
