@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GECH UTSAVA'26</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="winners-v2.css">
+</head>
+<body>
+
+<canvas id="starfield" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none;"></canvas>
+<canvas id="confetti-canvas"></canvas>
+
+    <nav>
+        <div class="nav-logo">UTSAVA'26</div>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+        <div class="nav-menu" id="nav-menu">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Our Team</a>
+                <a href="winners-v2.html" class="active">Winners</a>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Inline toggle for immediate response
+        function toggleMobileMenu() {
+            const menu = document.getElementById('nav-menu');
+            if (menu) menu.classList.toggle('show');
+        }
+    </script>
+
+
+<section class="winners-section">
+    <div class="winners-title">
+        <h1>WALL OF FRAME</h1>
+        <p style="color: var(--muted); letter-spacing: 2px; text-transform: uppercase;">Celebrating Excellence & Talent</p>
+    </div>
+
+    <!-- Simple Search Bar -->
+    <div style="margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto;">
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="event-search" placeholder="Search event name..." autocomplete="off">
+        </div>
+    </div>
+
+    <div class="filter-wrapper">
+        <!-- Desktop Buttons -->
+        <div class="filter-container desktop-only">
+            <button class="filter-btn active" data-filter="all">All Events</button>
+            <button class="filter-btn" data-filter="Mega">Mega</button>
+            <button class="filter-btn" data-filter="Performing Arts">Performing Arts</button>
+            <button class="filter-btn" data-filter="Dance & Music">Dance & Music</button>
+            <button class="filter-btn" data-filter="Literary">Literary</button>
+            <button class="filter-btn" data-filter="Visual Arts">Visual Arts</button>
+            <button class="filter-btn" data-filter="Games">Games</button>
+        </div>
+
+        
+    </div>
+
+    <div class="winners-grid" id="winners-grid">
+        <!-- Dynamically Populated -->
+    </div>
+
+    <div id="no-results" class="no-results" style="display: none;">
+        <div class="no-results-icon">🤷‍♂️</div>
+        <h3>No winners found</h3>
+        <p>Try searching for a different event name</p>
+    </div>
+</section>
+
+<footer style="text-align: center; padding: 3rem; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border);">
+    Made with Love © GEC Utsava'26 — Government Engineering College Hassan
+</footer>
+
+<script src="script.js"></script>
+<script src="winners-v2.js"></script>
+<script>
+    // Initialize reveal animation observer or manual trigger
+    function checkReveal() {
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(el => {
+            const windowHeight = window.innerHeight;
+            const revealTop = el.getBoundingClientRect().top;
+            const revealPoint = 150;
+            if (revealTop < windowHeight - revealPoint) {
+                el.classList.add('active');
+            }
+        });
+    }
+    window.addEventListener('scroll', checkReveal);
+    setTimeout(checkReveal, 100);
+</script>
+</body>
+</html>
