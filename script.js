@@ -239,6 +239,7 @@ const EVENTS = [
       'The first team to reach the final treasure with all clues completed correctly will be declared the winner.',
       'In case of a tie, the team with the least completion time will be considered.',
       'Decision of the judges / coordinators will be final.',
+'Using vechile to travel leads to disqualification.',
     ],
     coordinators: [
       { name: 'Ranganath H L', role: '3rd Year EC', phone: '+91 8217681657', init: 'HL' },
