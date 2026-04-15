@@ -472,7 +472,7 @@ const EVENTS = [
     ]
   },
   {
-    id: 'standup', link: 'Stand-Up - https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Stand-Up', name: 'Stand-Up Comedy', category: 'Performing Arts',
+    id: 'standup', link: 'Stand-Up - https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Stand+Up', name: 'Stand-Up Comedy', category: 'Performing Arts',
     emoji: '', day: 'Day 2 · April 28 · 03:00 PM', venue: 'Quadrangle', team: 'Solo',
     duration: '4 Minutes', fee: '₹20.00 per participant',
     color: 'linear-gradient(135deg,#1a0a00,#4a2800)',
