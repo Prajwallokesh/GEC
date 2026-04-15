@@ -19,7 +19,7 @@ const EVENT_IMAGES = {
   'solosinging': 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=70',
   'fashionshow': 'https://images.unsplash.com/photo-1543728069-a3f97c5a2f32?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'rangoli': 'https://images.unsplash.com/photo-1700993714468-408700d3599e?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  'treasurehunt': 'https://media.istockphoto.com/id/1154634349/photo/treasure-map.jpg?s=1024x1024&w=is&k=20&c=3s5ZK9zB7NoCOSCfw4gFauUzPtA_ujGJGq7ek4kRn1Y=',
+  'treasurehunt': 'iamges/th.jpeg',
   'superminute': 'https://images.unsplash.com/photo-1431499012454-31a9601150c9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'dumbcharades': 'https://images.unsplash.com/photo-1616880859986-096ccc4dd26f?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'spotphoto': 'https://plus.unsplash.com/premium_photo-1674389991678-0836ca77c7f7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
