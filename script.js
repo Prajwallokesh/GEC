@@ -225,7 +225,7 @@ const EVENTS = [
   },
   {
     id: 'treasurehunt', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Treasure+Hunt', name: 'Treasure Hunt', category: 'Games',
-    emoji: '🗺️', day: 'Day 1 · April 27 · 4:00 PM', venue: 'Entire Campus', team: '4 Members',
+    emoji: '', day: 'Day 1 · April 27 · 4:00 PM', venue: 'Entire Campus', team: '4 Members',
     duration: '2 Hours', fee: '₹25.00 per member',
     color: 'linear-gradient(135deg,#1a1000,#4a3000)',
     desc: '🗺️ TREASURE HUNT Decode the Clues • Race Against Time • Claim the Treasure 🎁Get ready for an exciting adventure filled with mystery, teamwork, and problem-solving!Treasure Hunt is a thrilling event where teams race across the campus, solving clues and completing challenges to reach the final treasure before time runs out.Only the sharpest minds and fastest teams will make it to the finish line 🏆',
