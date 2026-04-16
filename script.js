@@ -403,7 +403,6 @@ const EVENTS = [
      coordinators: [
       { name: 'Eshwar Chandra K C', role: '3rd Year CV', phone: '+91 8310286330', init: 'KC' },
       {name: Prathap Akkennavar', role: '3rd Year CV', phone: '+91 9019246567', init: 'PA' },
-      
     ]
   },
   {
