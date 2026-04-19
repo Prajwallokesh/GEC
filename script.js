@@ -66,7 +66,7 @@ const EVENTS = [
     desc: 'Write a well-structured essay on a topic revealed at the start of the competition. Tests language proficiency, ideation, grammar, and the ability to present arguments clearly.',
     instructions: [
       'Eligibility: Open to all students of the college.',
-      'Registration Fee: ₹20 per participant.',
+      'Registration Fee: ₹10 per participant.',
       'Duration: Total time is 60 minutes.',
       'Format: Single round of essay writing within the given time.',
       'Topic: Will be announced one day before the competition.',
@@ -424,7 +424,7 @@ const EVENTS = [
     ],
      coordinators: [
       { name: 'Eshwar Chandra K C', role: '3rd Year CV', phone: '+91 8310286330', init: 'KC' },
-      {name: 'Prathap Akkennavar', role: '3rd Year CV', phone: '+91 9019246567', init: 'PA' },
+      
     ]
   },
   {
@@ -520,7 +520,7 @@ const EVENTS = [
   },
   {
     id: 'rangoli', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Rangoli', name: 'Rangoli', category: 'Visual Arts',
-    emoji: '', day: 'Day 2 · May 07 · 03:00 PM', venue: 'College Gate', team: 'Solo',
+    emoji: '', day: 'Day 2 · May 07 · 03:00 PM', venue: 'College Gate', team: 'Duo',
     duration: '1 Hour', fee: '₹10.00 per participant',
     color: 'linear-gradient(135deg,#1a0a00,#5c2000)',
     desc: 'Create a vibrant, intricate Rangoli design on the college corridor floor. Participants use coloured powder or chalk to depict themes of nature, culture, or festivity.',
