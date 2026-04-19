@@ -50,7 +50,7 @@ const EVENTS = [
       'Tools: Use of stencils or any tools is not allowed.',
       'Area: Painting must be done only on the face (not on neck, hands, etc.).',
       'Decision: Judges’ decision will be final and binding.',
-      'Registration Fee: ₹20 per participant.',
+      'Registration Fee: ₹10 per participant.',
     ],
     coordinators: [
       { name: 'Krutika', role: '3rd Year EC', phone: '+91 6361056603', init: 'KP' },
@@ -85,7 +85,7 @@ const EVENTS = [
     {
     id: 'duodance', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Essay+Writing', name: 'Duo dance', category: 'Dance',
     emoji: '', day: 'Day 2 · May 07 · 03:30 PM', venue: 'Quadrangle', team: 'Duo',
-    duration: '1 Hour', fee: '₹20.00 per participant',
+    duration: '1 Hour', fee: '₹20.00 per Team',
     color: 'linear-gradient(135deg,#0a0e0a,#1a3020)',
     desc: 'Bring your perfect partner and light up the stage with powerful coordination and chemistry, showcasing any style through synchronized moves, expressive choreography, and teamwork to impress the crowd with an outstanding performance.',
     instructions: [
@@ -161,7 +161,7 @@ const EVENTS = [
     desc: 'A multi-round battle of minds covering general knowledge, science, technology, current affairs, pop culture, and campus trivia. Teams of 4 compete in written and buzzer rounds.',
     instructions: [
       'Team of 4 members is mandatory for participation.',
-      '💰 Registration fee is ₹20 per participant.',
+      '💰 Registration fee is ₹15 per participant.',
       '⏱️ Total event duration is 60 minutes (2 rounds).',
       '📝 Round 1: Written test with 30 questions in 30 minutes.',
       '🎤 Round 2: Oral round for qualified teams only (30 minutes).',
@@ -201,7 +201,7 @@ const EVENTS = [
   {
     id: 'foodfest', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Food+Fest', name: 'Food Fest', category: 'Mega',
     emoji: '', day: 'Day 1 · May 06 · 1:00 PM', venue: 'College Quadrangle', team: 'Up to 4 Members',
-    duration: '3 Hours', fee: '₹50.00 per stall',
+    duration: '3 Hours', fee: '₹50.00 per Stall',
     color: 'linear-gradient(135deg,#1a0a00,#5c2800)',
     desc: 'Set up your own food stall and showcase your culinary skills. Bring your best dishes and compete for the most popular stall of the fest.',
     instructions: [
@@ -278,7 +278,7 @@ const EVENTS = [
   {
     id: 'groupsinging', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Group+Singing', name: 'Group Singing', category: 'Music',
     emoji: '', day: 'Day 2 · May 07 · 10:00 AM', venue: 'Main Entrance Hall', team: '6 Members',
-    duration: '6 Minutes', fee: '₹30.00 per team',
+    duration: '6 Minutes', fee: '₹30.00 per Team',
     color: 'linear-gradient(135deg,#001a1a,#003d3d)',
     desc: 'A choral singing competition for groups of 6. Perform a harmonised rendition of any song — classical, devotional, folk, film, or western. Harmony, tune, and teamwork win.',
     instructions: [
@@ -409,7 +409,7 @@ const EVENTS = [
     ]
   },
   {
-    id: 'starofgech', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Star+of+GECH', name: 'Star of GECH', category: 'Mega',
+    id: 'starofgech', link: '#', name: 'Star of GECH', category: 'Mega',
     emoji: '⭐', day: 'Day 2 · May 07 · 04:00 PM', venue: 'Main Entrance Hall', team: 'Solo',
     duration: 'Multiple Rounds', fee: 'Free Entry',
     color: 'linear-gradient(135deg,#1a1400,#5c4a00)',
@@ -543,7 +543,7 @@ const EVENTS = [
    ]
   },
   {
-    id: 'flashmob', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Flash+Mob', name: 'Flash Mob', category: 'Mega',
+    id: 'flashmob', link: '#', name: 'Flash Mob', category: 'Mega',
     emoji: '⚡', day: 'Day 3 · May 08 · 04:00 PM', venue: 'College Quadrangle', team: '15–25 Members',
     duration: '12 Minutes', fee: 'Free Entry',
     color: 'linear-gradient(135deg,#1a1a00,#5c5c00)',
