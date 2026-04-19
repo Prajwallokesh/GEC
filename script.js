@@ -20,7 +20,7 @@ const EVENT_IMAGES = {
   'fashionshow': 'https://images.unsplash.com/photo-1543728069-a3f97c5a2f32?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'rangoli': 'https://images.unsplash.com/photo-1700993714468-408700d3599e?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'treasurehunt': 'iamges/th.jpeg',
-  'duodance':'
+  'duodance': 'iamges/duo.png',
   'superminute': 'https://images.unsplash.com/photo-1431499012454-31a9601150c9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'dumbcharades': 'https://images.unsplash.com/photo-1616880859986-096ccc4dd26f?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   'spotphoto': 'https://plus.unsplash.com/premium_photo-1674389991678-0836ca77c7f7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
@@ -60,6 +60,30 @@ const EVENTS = [
   
   {
     id: 'essay', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Essay+Writing', name: 'Essay Writing', category: 'Literary',
+    emoji: '', day: 'Day 1 · April 21 · 02:30 PM', venue: 'Class Room', team: 'Solo',
+    duration: '1 Hour', fee: '₹20.00 per participant',
+    color: 'linear-gradient(135deg,#0a0e0a,#1a3020)',
+    desc: 'Write a well-structured essay on a topic revealed at the start of the competition. Tests language proficiency, ideation, grammar, and the ability to present arguments clearly.',
+    instructions: [
+      'Eligibility: Open to all students of the college.',
+      'Registration Fee: ₹20 per participant.',
+      'Duration: Total time is 60 minutes.',
+      'Format: Single round of essay writing within the given time.',
+      'Topic: Will be announced one day before the competition.',
+      'Participation: Individual participation only.',
+      'Reporting: Participants must report on time.',
+      'Fair Practice: Use of mobile phones or any unfair means is strictly prohibited.',
+      'Originality: Essays must be original; copied content will lead to disqualification.',
+      'Materials: Participants must bring their own writing materials.',
+      'Decision: Judges’ decision will be final and binding.',  
+    ],
+    coordinators: [
+      { name: 'Tasmiya ', role: '2nd Year CV', phone: '+91 9019340098 ', init: 'T' },
+      { name: 'Goutham D P', role: '2nd Year ME', phone: '+91 9353837095 ', init: 'DP' },
+    ]
+  },
+    {
+    id: 'duodance', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Essay+Writing', name: 'Essay Writing', category: 'Literary',
     emoji: '', day: 'Day 1 · April 21 · 02:30 PM', venue: 'Class Room', team: 'Solo',
     duration: '1 Hour', fee: '₹20.00 per participant',
     color: 'linear-gradient(135deg,#0a0e0a,#1a3020)',
