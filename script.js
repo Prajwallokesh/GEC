@@ -33,8 +33,8 @@ const EVENT_IMAGES = {
 const EVENTS = [
   {
     id: 'facepainting', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Face+Painting', name: 'Face Painting', category: 'Visual Arts',
-    emoji: '', day: 'Day 1 · April 21 · 02:00 PM', venue: 'Open Auditorium', team: 'Solo',
-    duration: '1 Hour', fee: '₹20.00 per participant',
+    emoji: '', day: 'Day 1 · May 04 · 02:00 PM', venue: 'Open Auditorium', team: 'Solo',
+    duration: '1 Hour', fee: '₹10.00 per participant',
     color: 'linear-gradient(135deg,#1a001a,#4a004a)',
     desc: 'Transform a volunteer\'s face into living art within 60 minutes. Participants must bring their own face paints and showcase creativity, safety, and skill in their design.',
     instructions: [
@@ -60,8 +60,8 @@ const EVENTS = [
   
   {
     id: 'essay', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Essay+Writing', name: 'Essay Writing', category: 'Literary',
-    emoji: '', day: 'Day 1 · April 21 · 02:30 PM', venue: 'Class Room', team: 'Solo',
-    duration: '1 Hour', fee: '₹20.00 per participant',
+    emoji: '', day: 'Day 1 · May 04 · 02:30 PM', venue: 'Class Room', team: 'Solo',
+    duration: '1 Hour', fee: '₹10.00 per participant',
     color: 'linear-gradient(135deg,#0a0e0a,#1a3020)',
     desc: 'Write a well-structured essay on a topic revealed at the start of the competition. Tests language proficiency, ideation, grammar, and the ability to present arguments clearly.',
     instructions: [
@@ -87,7 +87,7 @@ const EVENTS = [
     emoji: '', day: 'Day 2 · May 07 · 03:30 PM', venue: 'Quadrangle', team: 'Duo',
     duration: '1 Hour', fee: '₹20.00 per participant',
     color: 'linear-gradient(135deg,#0a0e0a,#1a3020)',
-    desc: 'Write a well-structured essay on a topic revealed at the start of the competition. Tests language proficiency, ideation, grammar, and the ability to present arguments clearly.',
+    desc: 'Bring your perfect partner and light up the stage with powerful coordination and chemistry, showcasing any style through synchronized moves, expressive choreography, and teamwork to impress the crowd with an outstanding performance.',
     instructions: [
       'Eligibility: Open to all students of the college.',
       'Registration Fee: ₹20 per participant.',
@@ -102,14 +102,14 @@ const EVENTS = [
       'Decision: Judges’ decision will be final and binding.',  
     ],
     coordinators: [
-      { name: 'Tasmiya ', role: '2nd Year CV', phone: '+91 9019340098 ', init: 'T' },
-      { name: 'Goutham D P', role: '2nd Year ME', phone: '+91 9353837095 ', init: 'DP' },
+      { name: 'Raghavendra N Y ', role: '3rd Year CV', phone: '+91 9019938814 ', init: 'NY' },
+      { name: 'Boomika B C', role: '3rd Year CV', phone: '+91 9741809748 ', init: 'BC' },
     ]
   },
   {
     id: 'speech', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Pick+%26+Speech', name: 'Pick & Speech', category: 'Literary',
-    emoji: '', day: 'Day 1 · April 21 · 3:30 PM', venue: 'Main Auditorium', team: 'Solo',
-    duration: '5 Minutes', fee: '₹20.00 per participant',
+    emoji: '', day: 'Day 1 · May 04 · 3:30 PM', venue: 'Main Auditorium', team: 'Solo',
+    duration: '5 Minutes', fee: '₹10.00 per participant',
     color: 'linear-gradient(135deg,#0a0a1a,#1c1c5c)',
     desc: 'Participants pick a random topic from a bowl and deliver an impromptu speech on it with only 1 minute of preparation. Tests quick thinking, general knowledge, and oratory skills.',
     instructions: [
@@ -133,7 +133,7 @@ const EVENTS = [
   },
   {
     id: 'drawing', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Drawing', name: 'Drawing', category: 'Visual Arts',
-    emoji: '', day: 'Day 1 · April 27 · 11:00 AM', venue: 'Class Room', team: 'Solo',
+    emoji: '', day: 'Day 1 · May 06 · 11:00 AM', venue: 'Class Room', team: 'Solo',
     duration: '1 Hour', fee: '₹20.00 per participant',
     color: 'linear-gradient(135deg,#1a0f00,#5c3300)',
     desc: 'A timed drawing competition where participants express a given theme through pencil sketches, portraits, landscapes, or illustrations. Open to all drawing styles.',
@@ -155,8 +155,8 @@ const EVENTS = [
   },
   {
     id: 'quiz', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Quiz+Competition', name: 'Quiz Competition', category: 'Literary',
-    emoji: '', day: 'Day 1 · April 27 · 11:00 PM', venue: 'Class Room', team: '4 Members',
-    duration: '1 Hour', fee: '₹20.00 per member',
+    emoji: '', day: 'Day 1 · May 04 · 02:30 PM', venue: 'Class Room', team: '4 Members',
+    duration: '1 Hour', fee: '₹60.00 per team',
     color: 'linear-gradient(135deg,#0a1a0a,#1a5c1a)',
     desc: 'A multi-round battle of minds covering general knowledge, science, technology, current affairs, pop culture, and campus trivia. Teams of 4 compete in written and buzzer rounds.',
     instructions: [
@@ -173,7 +173,7 @@ const EVENTS = [
   },
   {
     id: 'spotphoto', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Spot+Photography', name: 'Spot Photography', category: 'Visual Arts',
-    emoji: '', day: 'Day 1 · April 27 · 12:00 PM', venue: 'College Campus', team: 'Solo',
+    emoji: '', day: 'Day 1 · May 06 · 12:00 PM', venue: 'College Campus', team: 'Solo',
     duration: '1 Hour', fee: '₹20.00 per participant',
     color: 'linear-gradient(135deg,#0a0a0a,#1a1a3a)',
     desc: 'Capture the essence of a given theme in a single photograph taken on-campus during the competition window. Minimal post-processing only. The best frame wins.📩 Send the captured photos to: varundrappu@gmail.com',
@@ -200,7 +200,7 @@ const EVENTS = [
   },
   {
     id: 'foodfest', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Food+Fest', name: 'Food Fest', category: 'Mega',
-    emoji: '', day: 'Day 1 · April 27 · 1:00 PM', venue: 'College Quadrangle', team: 'Up to 4 Members',
+    emoji: '', day: 'Day 1 · May 06 · 1:00 PM', venue: 'College Quadrangle', team: 'Up to 4 Members',
     duration: '3 Hours', fee: '₹50.00 per stall',
     color: 'linear-gradient(135deg,#1a0a00,#5c2800)',
     desc: 'Set up your own food stall and showcase your culinary skills. Bring your best dishes and compete for the most popular stall of the fest.',
@@ -228,8 +228,8 @@ const EVENTS = [
   },
   {
     id: 'superminute', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Super+Minute', name: 'Super Minute', category: 'Games',
-    emoji: '', day: 'Day 1 · April 27 · 02:00 PM', venue: 'Main Entrance Hall', team: '2 Members',
-    duration: '2 Hours', fee: '₹25.00 per member',
+    emoji: '', day: 'Day 1 · May 06 · 02:00 PM', venue: 'Main Entrance Hall', team: '2 Members',
+    duration: '2 Hours', fee: '₹50.00 per Team',
     color: 'linear-gradient(135deg,#001a0a,#00401a)',
     desc: 'A rapid-fire game show where pairs must complete fun tasks — word lists, tongue twisters, physical challenges, or estimation games — all within 60 seconds per task.',
     instructions: [
@@ -250,8 +250,8 @@ const EVENTS = [
   },
   {
     id: 'treasurehunt', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Treasure+Hunt', name: 'Treasure Hunt', category: 'Games',
-    emoji: '', day: 'Day 1 · April 27 · 4:00 PM', venue: 'Entire Campus', team: '4 Members',
-    duration: '2 Hours', fee: '₹25.00 per member',
+    emoji: '', day: 'Day 1 · May 06 · 3:30 PM', venue: 'Entire Campus', team: '4 Members',
+    duration: '2 Hours', fee: '₹60.00 per Team',
     color: 'linear-gradient(135deg,#1a1000,#4a3000)',
     desc: '🗺️ TREASURE HUNT Decode the Clues • Race Against Time • Claim the Treasure 🎁Get ready for an exciting adventure filled with mystery, teamwork, and problem-solving!Treasure Hunt is a thrilling event where teams race across the campus, solving clues and completing challenges to reach the final treasure before time runs out.Only the sharpest minds and fastest teams will make it to the finish line 🏆',
     instructions: [
@@ -277,8 +277,8 @@ const EVENTS = [
   },
   {
     id: 'groupsinging', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Group+Singing', name: 'Group Singing', category: 'Music',
-    emoji: '', day: 'Day 2 · April 28 · 09:30 AM', venue: 'Main Entrance Hall', team: '6 Members',
-    duration: '6 Minutes', fee: '₹20.00 per member',
+    emoji: '', day: 'Day 2 · May 07 · 10:00 AM', venue: 'Main Entrance Hall', team: '6 Members',
+    duration: '6 Minutes', fee: '₹30.00 per team',
     color: 'linear-gradient(135deg,#001a1a,#003d3d)',
     desc: 'A choral singing competition for groups of 6. Perform a harmonised rendition of any song — classical, devotional, folk, film, or western. Harmony, tune, and teamwork win.',
     instructions: [
@@ -302,8 +302,8 @@ const EVENTS = [
   },
   {
     id: 'solosinging', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Solo+Singing', name: 'Solo Singing', category: 'Music',
-    emoji: '', day: 'Day 2 ·April 28 · 9:30 AM', venue: 'Main Entrance Hall', team: 'Solo',
-    duration: '5 Minutes', fee: '₹20.00 per participant',
+    emoji: '', day: 'Day 2 · May 07 · 10:00 AM', venue: 'Main Entrance Hall', team: 'Solo',
+    duration: '5 Minutes', fee: '₹10.00 per participant',
     color: 'linear-gradient(135deg,#1a0a00,#5c2800)',
     desc: 'Take the stage and sing your heart out. Any language, any genre — demonstrate vocal range, tone, and emotion in front of a live audience and panel of judges.',
     instructions: [
@@ -326,8 +326,8 @@ const EVENTS = [
   },
   {
     id: 'mime', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Mime', name: 'Mime', category: 'Performing Arts',
-    emoji: '', day: 'Day 2 · April 28 · 09:30 AM', venue: 'Main Auditorium', team: '8 Members',
-    duration: '6 Minutes', fee: '₹20.00 per member',
+    emoji: '', day: 'Day 2 · May 07 · 10:00 AM', venue: 'Main Auditorium', team: '8 Members',
+    duration: '6 Minutes', fee: '₹40.00 per Team',
     color: 'linear-gradient(135deg,#0d0d0d,#303030)',
     desc: 'Express emotions and stories purely through body language and gesture — no words, no sound. A powerful silent art form judged on expression, synchronisation, and storytelling.',
     instructions: [
@@ -347,8 +347,8 @@ const EVENTS = [
   },
   {
     id: 'skit', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Skit', name: 'Skit', category: 'Performing Arts',
-    emoji: '', day: 'Day 2 · April 28 · 09:30 AM', venue: 'Main Auditorium', team: '8 Members',
-    duration: '8 Minutes', fee: '₹20.00 per member',
+    emoji: '', day: 'Day 2 · May 07 · 10:00 AM', venue: 'Main Auditorium', team: '8 Members',
+    duration: '8 Minutes', fee: '₹40.00 per Team',
     color: 'linear-gradient(135deg,#1a0a2e,#2d1b69)',
     desc: 'A theatrical skit competition where teams perform original or adapted short plays. Teams are judged on script, acting, direction, coordination and overall impact.',
     instructions: [
@@ -370,8 +370,8 @@ const EVENTS = [
   },
   {
     id: 'dumbcharades', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Dumb+Charades', name: 'Dumb Charades', category: 'Games',
-    emoji: '', day: 'Day 2 · April 28 · 11:00 AM', venue: 'Main Entrance Hall', team: '4 Members',
-    duration: '1 Hour', fee: '₹15.00 per member',
+    emoji: '', day: 'Day 1 · May 06 · 12:00 PM', venue: 'Main Entrance Hall', team: '4 Members',
+    duration: '1 Hour', fee: '₹40.00 per Team',
     color: 'linear-gradient(135deg,#001a1a,#003d40)',
     desc: 'The classic movie-guessing game, supercharged with rapid rounds. One team member acts out a film title silently while teammates race to guess it. Speed and creativity decide the winner.',
     instructions: [
@@ -392,8 +392,8 @@ const EVENTS = [
   },
   {
     id: 'debate', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Debate+Championship', name: 'Debate Championship', category: 'Literary',
-    emoji: '', day: 'Day 2 · April 28 · 12:00 PM', venue: 'Auditorium', team: '2 Members',
-    duration: '2 Hours', fee: '₹20.00 per member',
+    emoji: '', day: 'Day 2 · May 07 · 12:00 PM', venue: 'Auditorium', team: '2 Members',
+    duration: '2 Hours', fee: '₹10.00 per member',
     color: 'linear-gradient(135deg,#0a1a1a,#1a3d3d)',
     desc: 'Argue, persuade, and win. A formal debate competition testing your analytical thinking, public speaking, and ability to construct compelling arguments.',
     instructions: [
@@ -410,7 +410,7 @@ const EVENTS = [
   },
   {
     id: 'starofgech', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Star+of+GECH', name: 'Star of GECH', category: 'Mega',
-    emoji: '⭐', day: 'Day 2 · April 28 · 01:30 PM', venue: 'Main Entrance Hall', team: 'Solo',
+    emoji: '⭐', day: 'Day 2 · May 07 · 04:00 PM', venue: 'Main Entrance Hall', team: 'Solo',
     duration: 'Multiple Rounds', fee: 'Free Entry',
     color: 'linear-gradient(135deg,#1a1400,#5c4a00)',
     desc: 'The crown jewel of Gech Utsava Fest — a multi-talent pageant to find the ultimate star of GECH. Compete in multiple talent rounds: introduction, talent, ramp walk, and Q&A before a live audience.',
@@ -432,8 +432,8 @@ const EVENTS = [
   },
   {
     id: 'fashionshow', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Fashion+Show', name: 'Fashion Show', category: 'Performing Arts',
-    emoji: '', day: 'Day 2 · April 28 · 02:00 PM', venue: 'Quadrangle', team: '8 Members',
-    duration: '5 Minutes', fee: '₹20.00 per member',
+    emoji: '', day: 'Day 2 · May 07 · 02:00 PM', venue: 'Quadrangle', team: '8 Members',
+    duration: '5 Minutes', fee: '₹40.00 per Team',
     color: 'linear-gradient(135deg,#1a0a0a,#5c1c1c)',
     desc: 'A spectacular fashion runway showcasing theme-based outfits. Teams design, stitch, and model their creations. Theme for 2025: "Roots to Runway" — blend heritage with modern.',
     instructions: [
@@ -457,8 +457,8 @@ const EVENTS = [
   },
   {
     id: 'groupdance', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Group+Dance', name: 'Group Dance', category: 'Dance',
-    emoji: '', day: 'Day 2 · April 28 · 02:00 PM', venue: 'Quadrangle', team: '6 Members',
-    duration: '10 Minutes', fee: '₹20.00 per member',
+    emoji: '', day: 'Day 2 · May 07 · 03:00 PM', venue: 'Quadrangle', team: '6 Members',
+    duration: '10 Minutes', fee: '₹30.00 per Team',
     color: 'linear-gradient(135deg,#1a001a,#3d0050)',
     desc: 'Six dancers, one team, one stage. Perform a choreographed group routine blending any dance forms. Synchronisation, energy, and expression win the day.',
     instructions: [
@@ -480,8 +480,8 @@ const EVENTS = [
   },
   {
     id: 'solodance', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Solo+Dance', name: 'Solo Dance', category: 'Dance',
-    emoji: '', day: 'Day 2 · April 28 · 03:00 PM', venue: 'Quadrangle', team: 'Solo',
-    duration: '6 Minutes', fee: '₹20.00 per participant',
+    emoji: '', day: 'Day 2 · May 07 · 03:00 PM', venue: 'Quadrangle', team: 'Solo',
+    duration: '6 Minutes', fee: '₹10.00 per participant',
     color: 'linear-gradient(135deg,#1a001a,#5c0050)',
     desc: 'Express yourself through any dance form — classical, contemporary, hip-hop, folk, or fusion. Dazzle the judges with your unique style and stage presence.',
     instructions: [
@@ -502,8 +502,8 @@ const EVENTS = [
   },
   {
     id: 'standup', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Stand-Up', name: 'Stand-Up Comedy', category: 'Performing Arts',
-    emoji: '', day: 'Day 2 · April 28 · 03:00 PM', venue: 'Quadrangle', team: 'Solo',
-    duration: '4 Minutes', fee: '₹20.00 per participant',
+    emoji: '', day: 'Day 2 · May 07 · 03:00 PM', venue: 'Quadrangle', team: 'Solo',
+    duration: '4 Minutes', fee: '₹10.00 per participant',
     color: 'linear-gradient(135deg,#1a0a00,#4a2800)',
     desc: 'Take the mic and make the crowd burst into laughter. Original stand-up comedy material on any topic — college life, observations, satire, or absurd humor all welcome.',
     instructions: [
@@ -523,7 +523,7 @@ const EVENTS = [
   },
   {
     id: 'rangoli', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Rangoli', name: 'Rangoli', category: 'Visual Arts',
-    emoji: '', day: 'Day 2 · April 28 · 04:00 PM', venue: 'College Gate', team: 'Solo',
+    emoji: '', day: 'Day 2 · May 07 · 03:00 PM', venue: 'College Gate', team: 'Solo',
     duration: '1 Hour', fee: '₹10.00 per participant',
     color: 'linear-gradient(135deg,#1a0a00,#5c2000)',
     desc: 'Create a vibrant, intricate Rangoli design on the college corridor floor. Participants use coloured powder or chalk to depict themes of nature, culture, or festivity.',
@@ -544,7 +544,7 @@ const EVENTS = [
   },
   {
     id: 'flashmob', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Flash+Mob', name: 'Flash Mob', category: 'Mega',
-    emoji: '⚡', day: 'Day 3 · April 29 · 04:00 PM', venue: 'College Quadrangle', team: '15–25 Members',
+    emoji: '⚡', day: 'Day 3 · May 08 · 04:00 PM', venue: 'College Quadrangle', team: '15–25 Members',
     duration: '12 Minutes', fee: 'Free Entry',
     color: 'linear-gradient(135deg,#1a1a00,#5c5c00)',
     desc: 'The most electrifying event of NEXUS — a surprise performance at the campus quadrangle. Blend dance, drama, and music for a crowd-stopping 12-minute spectacle.',
