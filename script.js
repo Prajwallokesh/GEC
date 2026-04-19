@@ -723,7 +723,7 @@ function registerForEvent() {
 
 // COUNTDOWN
 function startCountdown() {
-const festDate = new Date('2026-04-29T11:00:00+05:30');
+const festDate = new Date('2026-05-08T10:00:00+05:30');
   function update() {
     const now = new Date();
     const diff = festDate - now;
