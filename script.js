@@ -171,7 +171,7 @@ const EVENTS = [
   {
     id: 'spotphoto', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Spot+Photography', name: 'Spot Photography', category: 'Visual Arts',
     emoji: '', day: 'Day 1 · May 06 · 12:00 PM', venue: 'College Campus', team: 'Solo',
-    duration: '1 Hour', fee: '₹20.00 per participant',
+    duration: '1 Hour', fee: '₹10.00 per participant',
     color: 'linear-gradient(135deg,#0a0a0a,#1a1a3a)',
     desc: 'Capture the essence of a given theme in a single photograph taken on-campus during the competition window. Minimal post-processing only. The best frame wins.📩 Send the captured photos to: varundrappu@gmail.com',
     instructions: [
