@@ -406,7 +406,7 @@ const EVENTS = [
     ]
   },
   {
-    id: 'starofgech', link: '#', name: 'Star of GECH', category: 'Mega',
+    id: 'starofgech', link: 'https://forms.gle/FqgK18zq1kwx2Qkw7', name: 'Star of GECH', category: 'Mega',
     emoji: '⭐', day: 'Day 2 · May 07 · 04:00 PM', venue: 'Main Entrance Hall', team: 'Solo',
     duration: 'Multiple Rounds', fee: 'Free Entry',
     color: 'linear-gradient(135deg,#1a1400,#5c4a00)',
