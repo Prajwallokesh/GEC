@@ -34,7 +34,7 @@ const EVENTS = [
   {
     id: 'facepainting', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Face+Painting', name: 'Face Painting', category: 'Visual Arts',
     emoji: '', day: 'Day 1 · May 04 · 02:00 PM', venue: 'Open Auditorium', team: 'Solo',
-    duration: '1 Hour', fee: '₹10.00 per participant',
+    duration: '1 Hour', fee: 'Event Completed',
     color: 'linear-gradient(135deg,#1a001a,#4a004a)',
     desc: 'Transform a volunteer\'s face into living art within 60 minutes. Participants must bring their own face paints and showcase creativity, safety, and skill in their design.',
     instructions: [
@@ -61,7 +61,7 @@ const EVENTS = [
   {
     id: 'essay', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Essay+Writing', name: 'Essay Writing', category: 'Literary',
     emoji: '', day: 'Day 1 · May 04 · 02:30 PM', venue: 'Class Room', team: 'Solo',
-    duration: '1 Hour', fee: '₹10.00 per participant',
+    duration: '1 Hour', fee: 'Event Completed',
     color: 'linear-gradient(135deg,#0a0e0a,#1a3020)',
     desc: 'Write a well-structured essay on a topic revealed at the start of the competition. Tests language proficiency, ideation, grammar, and the ability to present arguments clearly.',
     instructions: [
@@ -106,7 +106,7 @@ const EVENTS = [
   {
     id: 'speech', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Pick+%26+Speech', name: 'Pick & Speech', category: 'Literary',
     emoji: '', day: 'Day 1 · May 04 · 3:30 PM', venue: 'Main Auditorium', team: 'Solo',
-    duration: '5 Minutes', fee: '₹10.00 per participant',
+    duration: '5 Minutes', fee: 'Event Completed',
     color: 'linear-gradient(135deg,#0a0a1a,#1c1c5c)',
     desc: 'Participants pick a random topic from a bowl and deliver an impromptu speech on it with only 1 minute of preparation. Tests quick thinking, general knowledge, and oratory skills.',
     instructions: [
@@ -153,7 +153,7 @@ const EVENTS = [
   {
     id: 'quiz', link: 'https://docs.google.com/forms/d/e/1FAIpQLSci-YgFNgLdfCZSjs1_9pHYsOSzns4gd6av9oAf_DQ4w_Osog/viewform?usp=pp_url&entry.35534824=Quiz+Competition', name: 'Quiz Competition', category: 'Literary',
     emoji: '', day: 'Day 1 · May 04 · 02:30 PM', venue: 'Class Room', team: '4 Members',
-    duration: '1 Hour', fee: '₹60.00 per team',
+    duration: '1 Hour', fee: 'Event Completed',
     color: 'linear-gradient(135deg,#0a1a0a,#1a5c1a)',
     desc: 'A multi-round battle of minds covering general knowledge, science, technology, current affairs, pop culture, and campus trivia. Teams of 4 compete in written and buzzer rounds.',
     instructions: [
